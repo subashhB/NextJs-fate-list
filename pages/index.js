@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div>
-      <h1>Homepage</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem expedita aut ipsum sit exercitationem, corrupti optio minima, esse et, maiores vero cum deleniti molestiae. Natus quas nulla repellat consectetur fugit.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem expedita aut ipsum sit exercitationem, corrupti optio minima, esse et, maiores vero cum deleniti molestiae. Natus quas nulla repellat consectetur fugit.</p>
-      <Link href="/servants">See all Servants</Link>
+      <h1 className={styles.title}>Homepage</h1>
+      <p className={styles.text} >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem expedita aut ipsum sit exercitationem, corrupti optio minima, esse et, maiores vero cum deleniti molestiae. Natus quas nulla repellat consectetur fugit.</p>
+      <p className={styles.text}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem expedita aut ipsum sit exercitationem, corrupti optio minima, esse et, maiores vero cum deleniti molestiae. Natus quas nulla repellat consectetur fugit.</p>
+      <Link className={styles.btn} href="/servants">See all Servants</Link>
     </div>
   )
 }
