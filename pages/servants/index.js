@@ -1,16 +1,18 @@
 import Head from "next/head";
 import React from "react";
-import styles from '../../styles/Servants.module.css'
+import styles from "../../styles/Servants.module.css";
 import Link from "next/link";
 
-export const getStaticProps = async()=>{
-
-  const res = await fetch('https://api.atlasacademy.io/export/NA/nice_servant.json');
-  const data = await res.json();
+export const getStaticProps = async () => {
+  const res = await fetch(
+    "https://api.atlasacademy.io/export/NA/nice_servant.json"
+  );
+  const json = await res.json();
+  const data = json.slice(0,10)
   return {
-    props: {servants: data}
-  }
-}
+    props: { servants: data },
+  };
+};
 
 const Servants = ({ servants }) => {
   return (
@@ -21,10 +23,10 @@ const Servants = ({ servants }) => {
       </Head>
       <div>
         <h1>All Servants</h1>
-        {servants.map((servant)=>(
-          <div key={servant.id}>
-            <Link className={styles.single} href={'/'}><h3>{servant.name}</h3></Link>
-          </div>
+        {servants.map((servant) => (
+          <Link key={servant.id}  className={styles.single} href={`/servants/${servant.id}`}>
+            <h3>{servant.name}</h3>
+          </Link>
         ))}
       </div>
     </>
