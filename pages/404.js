@@ -1,7 +1,14 @@
 import Link from 'next/link'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 
 const NotFound = () => {
+  const router = useRouter();
+  useEffect(()=>{
+    setTimeout(()=>{
+      router.push('/')
+    }, 5000)
+  },[router])
   return (
     <div className='not-found'>
         <h1>Wow, such empty....</h1>
