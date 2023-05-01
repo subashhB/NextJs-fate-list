@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className="logo">
-            <h1>Fate List</h1>
+          <Image src="/logo.png" width={135} height={65} alt='Logo was supposed to be here.'/>
         </div>
         <Link href="/">Home</Link>
         <Link href="/about">About Us</Link>

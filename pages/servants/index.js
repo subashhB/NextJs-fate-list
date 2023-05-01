@@ -1,11 +1,18 @@
-import React from 'react'
+import Head from "next/head";
+import React from "react";
 
 const Servants = () => {
   return (
-    <div>
+    <>
+      <Head>
+        <title>FGO List | Servants</title>
+        <meta name="keywords" content="fatego" />
+      </Head>
+      <div>
         <h1>All Servants</h1>
-    </div>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default Servants
+export default Servants;
